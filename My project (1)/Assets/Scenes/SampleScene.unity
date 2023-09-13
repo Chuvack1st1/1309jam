@@ -610,10 +610,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 2585759046057990992, guid: a005dfb1a6045d1469a86e1c11c0f2c3, type: 3}
-      propertyPath: GrassStep
-      value: 
-      objectReference: {fileID: 8300000, guid: bd8f6a6a400337b4eb38949540471fb7, type: 3}
+    - target: {fileID: 1453494565089049816, guid: a005dfb1a6045d1469a86e1c11c0f2c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.05
+      objectReference: {fileID: 0}
     - target: {fileID: 3972363613014148316, guid: a005dfb1a6045d1469a86e1c11c0f2c3, type: 3}
       propertyPath: m_RootOrder
       value: 1

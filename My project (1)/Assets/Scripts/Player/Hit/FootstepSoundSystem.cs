@@ -20,8 +20,7 @@ public class FootstepSoundSystem : MonoBehaviour
 
     private void Update()
     {
-        if (playerRotaion.InputDirection.x > 1 ||
-                            playerRotaion.InputDirection.z > 1)
+        if (Input.GetKey(KeyCode.LeftShift))
         {
             audioSource.pitch = 1.25f;
         }

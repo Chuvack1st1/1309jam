@@ -15,10 +15,10 @@ public class PlayerRotaion2 : MonoBehaviour
     public float SprintSpeed = 30;
     private float currMoveSpeed = 0;
 
-    protected CharacterController movementController;
-    protected Camera playerCamera;
+    public Transform cameraPoint;
 
-    protected bool isControlling;
+    protected CharacterController movementController;
+    
     protected float yaw;
     protected float pitch;
 
@@ -29,10 +29,7 @@ public class PlayerRotaion2 : MonoBehaviour
     {
 
         movementController = GetComponent<CharacterController>();   //  Character Controller
-        playerCamera = GetComponentInChildren<Camera>();            //  Player Camera
-
-        isControlling = true;
-        ToggleControl();    //  Toggle Player control
+       
     }
 
     protected virtual void Update()
@@ -76,7 +73,8 @@ public class PlayerRotaion2 : MonoBehaviour
         yaw = ClampAngle(yaw, MinYaw, MaxYaw);
         pitch = ClampAngle(pitch, MinPitch, MaxPitch);
 
-        transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
+        transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
+        cameraPoint.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
     }
 
     protected float ClampAngle(float angle)
@@ -93,11 +91,4 @@ public class PlayerRotaion2 : MonoBehaviour
 
         return Mathf.Clamp(angle, min, max);
     }
-
-    protected void ToggleControl()
-    {
-
-        playerCamera.gameObject.SetActive(isControlling);
-    }
-
 }
