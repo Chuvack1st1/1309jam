@@ -23,7 +23,7 @@ public class PlayerRotaion2 : MonoBehaviour
     protected float pitch;
 
     protected Vector3 velocity;
-
+    public Vector3 InputDirection;
 
     protected virtual void Start()
     {
@@ -46,7 +46,7 @@ public class PlayerRotaion2 : MonoBehaviour
         direction += transform.right * Input.GetAxisRaw("Horizontal");
 
         direction.Normalize();
-
+        InputDirection = direction;
         if (movementController.isGrounded)
         {
             velocity = Vector3.zero;
@@ -59,6 +59,7 @@ public class PlayerRotaion2 : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftShift))
         {  // Player can sprint by holding "Left Shit" keyboard button
             currMoveSpeed = SprintSpeed;
+            InputDirection *= 2;
         }
         else
         {

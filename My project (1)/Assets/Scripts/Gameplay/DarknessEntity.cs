@@ -41,8 +41,11 @@ public class DarknessEntity : MonoBehaviour
             {
                 playerStats.healthSystem.Health -= playerStats.healthSystem.MAXHEALTHPOINT / 2;
                 timeInDarkness = 0;
+                if (playerStats.healthSystem.Health == 0)
+                    break;
             }
         }
+        yield   return null;
     }
 
     private void OnDisable()
