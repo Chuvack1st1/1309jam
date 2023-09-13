@@ -17,7 +17,6 @@ public class HealthSystem
         set 
         {
             health = Mathf.Clamp(value, 0, MAXHEALTHPOINT);
-            Debug.Log(health);
             AntityHealthChangeEvent?.Invoke(health);
             if (health == 0)
             {
