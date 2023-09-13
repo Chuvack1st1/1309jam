@@ -158,6 +158,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8889549143731760727}
   - component: {fileID: 1341704930152622568}
+  - component: {fileID: 4763616889932988632}
   m_Layer: 0
   m_Name: Hitbox
   m_TagString: Untagged
@@ -189,12 +190,24 @@ CapsuleCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3820870824618727903}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   m_Radius: 0.5
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &4763616889932988632
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3820870824618727903}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e729fe0287bdfb4b9dca96d12350aab, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3972363613014148317
 GameObject:
   m_ObjectHideFlags: 0
@@ -206,6 +219,7 @@ GameObject:
   - component: {fileID: 3972363613014148316}
   - component: {fileID: 77482485429748863}
   - component: {fileID: 4968286850352269432}
+  - component: {fileID: 89481686236057482}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -267,6 +281,18 @@ MonoBehaviour:
   LookSensitivity: 1
   MoveSpeed: 4
   SprintSpeed: 8
+--- !u!114 &89481686236057482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3972363613014148317}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83d4d15e0c2d8af4cb6cb57bfb03ae91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &3062522926627663584
 PrefabInstance:
   m_ObjectHideFlags: 0
