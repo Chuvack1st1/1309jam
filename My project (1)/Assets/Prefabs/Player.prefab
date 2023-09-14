@@ -116,7 +116,7 @@ Transform:
   - {fileID: 4750245614031924137}
   - {fileID: 1821987413811701222}
   m_Father: {fileID: 3972363613014148316}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1303889775797182156
 MonoBehaviour:
@@ -155,14 +155,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2297149019856933647}
-  m_LocalRotation: {x: -0.50609154, y: 0.4938333, z: 0.50609154, w: 0.4938333}
-  m_LocalPosition: {x: -0.06, y: 0.072, z: 0}
-  m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
+  m_LocalRotation: {x: 0.000000059604638, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.60147095, z: 0.037}
+  m_LocalScale: {x: 0.099999994, y: 0.099999994, z: 0.099999994}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 963194228}
-  m_Father: {fileID: 3785756186132494795}
-  m_RootOrder: 0
+  m_Father: {fileID: 3972363613014148316}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3816232172163476130
 GameObject:
@@ -403,6 +403,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 8889549143731760727}
+  - {fileID: 1453494565089049816}
   - {fileID: 4837425235060693046}
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -460,6 +461,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthSystem:
     MAXHEALTHPOINT: 100
+    starvingDamage: 0
+    busicHeal: 0
+  hungrySystem:
+    MAXHUNGRYPOINT: 0
+    MINHUNGRYDICREASEPOINT: 0
+  staminaSystem:
+    MaxStaminaPoint: 0
+    BusicHealCount: 0
+    BusicDeaciseCount: 0
 --- !u!114 &1828083796782883496
 MonoBehaviour:
   m_ObjectHideFlags: 0

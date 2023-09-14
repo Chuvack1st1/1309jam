@@ -35,8 +35,6 @@ public class PlayerRotaion2 : MonoBehaviour
     protected virtual void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.R))
-            transform.position = new Vector3(3, 0, 0); // Hit "R" to spawn in this position
 
         Vector3 direction = Vector3.zero;
         direction += transform.forward * Input.GetAxisRaw("Vertical");

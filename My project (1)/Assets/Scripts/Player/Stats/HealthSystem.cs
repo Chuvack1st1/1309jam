@@ -9,7 +9,10 @@ public class HealthSystem
     public float MAXHEALTHPOINT;
     private float health;
 
-    public UnityAction<float> AntityHealthChangeEvent;
+    public float starvingDamage;
+    public float busicHeal;
+
+    public UnityAction<HealthSystem> AntityHealthChangeEvent;
 
     public UnityAction AntityDieEvent;
 
@@ -17,7 +20,7 @@ public class HealthSystem
         set 
         {
             health = Mathf.Clamp(value, 0, MAXHEALTHPOINT);
-            AntityHealthChangeEvent?.Invoke(health);
+            AntityHealthChangeEvent?.Invoke(this);
             if (health == 0)
             {
                 AntityDieEvent.Invoke();
