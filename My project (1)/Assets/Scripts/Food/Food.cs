@@ -16,7 +16,7 @@ public class Food : MonoBehaviour, ISelectableItem
 
     public void Interact()
     {
-        Debug.Log("food have been eat");
+        PlayerStatServise.Instance.ApplyHeal(healthBonus);
 
         Destroy(gameObject);
         SelectableItemDestroyEvent.Invoke(this, EventArgs.Empty);
