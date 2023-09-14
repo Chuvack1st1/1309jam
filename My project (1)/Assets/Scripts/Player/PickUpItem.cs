@@ -7,7 +7,6 @@ public class PickUpItem : MonoBehaviour
 {
     private ISelectableItem lastSelectedObject = null;
 
-
     private void FixedUpdate()
     {
         Ray ray = new Ray(transform.position, transform.TransformDirection(Vector3.forward));
