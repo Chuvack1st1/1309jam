@@ -87,7 +87,6 @@ GameObject:
   m_Component:
   - component: {fileID: 7468492461744325897}
   - component: {fileID: 2535272003603409020}
-  - component: {fileID: 1087981917306242754}
   m_Layer: 5
   m_Name: Bars
   m_TagString: Untagged
@@ -126,36 +125,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8451354625006513416}
   m_CullTransparentMesh: 1
---- !u!114 &1087981917306242754
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8451354625006513416}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.49803922}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
 --- !u!1001 &4374735424320271067
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -263,6 +232,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3870734881464390994, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: fed24bd82cefc0c4a8ef64dab6231b53, type: 3}
     - target: {fileID: 8844350113224844695, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -271,7 +244,8 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7318813570242562163, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
 --- !u!224 &2464519788932152409 stripped
 RectTransform:
@@ -384,6 +358,14 @@ PrefabInstance:
     - target: {fileID: 2877535103202920665, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
       propertyPath: m_Color.r
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3870734881464390994, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 39905f1b0c89bf742b8b17748d694d87, type: 3}
+    - target: {fileID: 7318813570242562163, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
+      propertyPath: m_Texture
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8844350113224844695, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
       propertyPath: m_AnchorMax.x
@@ -507,6 +489,10 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3870734881464390994, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 04079b31480ea7d4d96a4ed4fe8edd25, type: 3}
     - target: {fileID: 8844350113224844695, guid: ae1660ebf80afc04d81fdc25d304e069, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
