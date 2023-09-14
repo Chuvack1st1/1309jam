@@ -8,12 +8,7 @@ public abstract class Bar : MonoBehaviour
 {
     [SerializeField]
     protected PlayerStats playerStats;
-
+    [SerializeField]
     protected Slider slider;
-
-    private void Start()
-    {
-        slider = GetComponentInChildren<Slider>();
-    }
 
 }
