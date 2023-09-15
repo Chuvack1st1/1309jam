@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 [RequireComponent(typeof(CharacterController))]
 public class PlayerRotaion2 : MonoBehaviour
@@ -25,17 +26,20 @@ public class PlayerRotaion2 : MonoBehaviour
     protected Vector3 velocity;
     public Vector3 InputDirection;
 
+
     protected virtual void Start()
     {
-
         movementController = GetComponent<CharacterController>();   //  Character Controller
-       
     }
 
     protected virtual void Update()
     {
+        Move();
+    }
 
-
+    
+    private void Move()
+    {
         Vector3 direction = Vector3.zero;
         direction += transform.forward * Input.GetAxisRaw("Vertical");
         direction += transform.right * Input.GetAxisRaw("Horizontal");
@@ -74,7 +78,6 @@ public class PlayerRotaion2 : MonoBehaviour
         transform.eulerAngles = new Vector3(0.0f, yaw, 0.0f);
         cameraPoint.transform.eulerAngles = new Vector3(pitch, yaw, 0.0f);
     }
-
     protected float ClampAngle(float angle)
     {
         return ClampAngle(angle, 0, 360);
@@ -89,4 +92,5 @@ public class PlayerRotaion2 : MonoBehaviour
 
         return Mathf.Clamp(angle, min, max);
     }
+
 }
