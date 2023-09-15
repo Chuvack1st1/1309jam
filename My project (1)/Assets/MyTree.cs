@@ -1,16 +1,20 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class MyTree : MonoBehaviour
+public class MyTree : MonoBehaviour, ISelectableItem
 {
     public float startHeal;
-
+    public GameObject SelectedUI;
     private float health;
 
     public UnityAction TreeHealthChengeEvent;
     public UnityAction TreeDieEvent;
+
+    public event EventHandler SelectableItemDestroyEvent;
+
     public float Health { get => health;
         set 
         {
@@ -26,5 +30,20 @@ public class MyTree : MonoBehaviour
     private void Start()
     {
         health = startHeal;
+    }
+
+    public void Disalect()
+    {
+        SelectedUI.SetActive(false);
+    }
+
+    public void Interact()
+    {
+
+    }
+
+    public void Select()
+    {
+        SelectedUI.SetActive(true);
     }
 }

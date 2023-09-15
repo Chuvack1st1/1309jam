@@ -5,7 +5,7 @@ public class Food : MonoBehaviour, ISelectableItem
 {
     public float healthBonus;
 
-    [SerializeField] GameObject SelectedUI;
+    public GameObject SelectedUI;
 
     public event EventHandler SelectableItemDestroyEvent;
 
