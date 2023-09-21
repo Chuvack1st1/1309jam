@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class Food : MonoBehaviour, ISelectableItem
+public class Food : MonoBehaviour, IInteractable
 {
     public float healthBonus;
 
