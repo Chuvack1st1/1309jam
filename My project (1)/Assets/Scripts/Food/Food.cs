@@ -1,13 +1,13 @@
 using System;
 using UnityEngine;
 
-public class Food : MonoBehaviour, IInteractable
+public class Food : MonoBehaviour, ISelectableItem, IInteractable
 {
     public float healthBonus;
 
     public GameObject SelectedUI;
 
-    public event EventHandler SelectableItemDestroyEvent;
+    public event Action SelectableItemDestroyEvent;
 
     public void Disalect()
     {
@@ -19,7 +19,7 @@ public class Food : MonoBehaviour, IInteractable
         PlayerStatServise.Instance.ApplyHeal(healthBonus);
 
         Destroy(gameObject);
-        SelectableItemDestroyEvent.Invoke(this, EventArgs.Empty);
+        SelectableItemDestroyEvent.Invoke();
     }
 
     public void Select()

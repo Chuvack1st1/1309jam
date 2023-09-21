@@ -9,5 +9,5 @@ public interface ISelectableItem
 
     public void Disalect();
 
-    public event EventHandler SelectableItemDestroyEvent;
+    public event Action SelectableItemDestroyEvent;
 }

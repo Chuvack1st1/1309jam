@@ -13,7 +13,7 @@ public class MyTree : MonoBehaviour, ISelectableItem
     public UnityAction TreeHealthChengeEvent;
     public UnityAction TreeDieEvent;
 
-    public event EventHandler SelectableItemDestroyEvent;
+    public event Action SelectableItemDestroyEvent;
 
     public float Health { get => health;
         set 
@@ -36,12 +36,6 @@ public class MyTree : MonoBehaviour, ISelectableItem
     {
         SelectedUI.SetActive(false);
     }
-
-    public void Interact()
-    {
-
-    }
-
     public void Select()
     {
         SelectedUI.SetActive(true);

@@ -1,5 +1,5 @@
 
-interface IInteractable : ISelectableItem
+interface IInteractable 
 {
     public void Interact();
 }

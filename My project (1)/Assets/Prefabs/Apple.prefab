@@ -107,6 +107,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2601036165610717833}
   - component: {fileID: 7678158657957615492}
+  - component: {fileID: 4565531588349203925}
   m_Layer: 0
   m_Name: Apple
   m_TagString: Untagged
@@ -145,6 +146,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   healthBonus: 10
   SelectedUI: {fileID: 7156789132502921850}
+--- !u!135 &4565531588349203925
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2601036165610717834}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.2
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &3871321676678133753
 GameObject:
   m_ObjectHideFlags: 0
@@ -237,7 +251,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 822939656063264488}
-  - component: {fileID: 3150878980180789440}
   m_Layer: 0
   m_Name: Graphics
   m_TagString: Untagged
@@ -263,19 +276,6 @@ Transform:
   m_Father: {fileID: 2601036165610717833}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!135 &3150878980180789440
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5924602822526824263}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &6372689275038386295
 GameObject:
   m_ObjectHideFlags: 0

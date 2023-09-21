@@ -28,11 +28,16 @@ public class LookForward : MonoBehaviour
             {
                 SelectNewObject(selectable);
             }
+            else
+            {
+                DiselectItem();
+            }
         }
     }
 
     private void SelectNewObject(ISelectableItem newSelectable)
     {
+
         if (lastSelectedObject != newSelectable)
         {
             if (lastSelectedObject != null)
@@ -44,13 +49,9 @@ public class LookForward : MonoBehaviour
             lastSelectedObject.Select();
             lastSelectedObject.SelectableItemDestroyEvent += DiselectItem;
         }
-        else
-        {
-            DiselectItem(this, EventArgs.Empty);
-        }
     }
 
-    private void DiselectItem(object sender, EventArgs e)
+    private void DiselectItem()
     {
         lastSelectedObject?.Disalect();
         lastSelectedObject = null;
