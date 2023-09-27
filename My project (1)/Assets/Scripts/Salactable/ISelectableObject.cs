@@ -1,11 +1,12 @@
 
 using System;
-using UnityEngine;
+using System.Collections.Generic;
 
-public interface ISelectableItem 
+public interface ISelectableObject
 {
-
+    
     public void Select();
+    public void Interact();
 
     public void Disalect();
 

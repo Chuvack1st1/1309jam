@@ -18,9 +18,8 @@ public class MeaponManager : MonoBehaviour
         StartAtackEvent += Attack;
         IsAttackStarted = false;
     }
-    protected virtual void Update()
+    private void Update()
     {
-
         if (Input.GetKeyDown(KeyCode.Mouse0) && !IsAttackStarted)
         {
             StartAtackEvent.Invoke();
@@ -40,8 +39,7 @@ public class MeaponManager : MonoBehaviour
         {
             if (hit.collider.gameObject.TryGetComponent(out MyTree tree))
             {
-                Debug.Log("aaaa");
-                tree.Health = currentTool.Damage;
+                tree.GetDamage(currentTool.Damage);
             }
         }
         yield return new WaitForSeconds(1);

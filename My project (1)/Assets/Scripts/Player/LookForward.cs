@@ -7,7 +7,7 @@ using UnityEngine.UI;
 public class LookForward : MonoBehaviour
 {
     private const int LookRayDistance = 3;
-    private ISelectableItem lastSelectedObject = null;
+    private ISelectableObject lastSelectedObject = null;
 
     private void FixedUpdate()
     {
@@ -24,9 +24,12 @@ public class LookForward : MonoBehaviour
         {
             var newSelectableObject = hit.collider.gameObject;
 
-            if (newSelectableObject.TryGetComponent(out ISelectableItem selectable)) 
+            if (newSelectableObject.TryGetComponent(out ISelectableObject selectable)) 
             {
                 SelectNewObject(selectable);
+
+                if (Input.GetKeyDown(KeyCode.E))
+                    selectable.Interact();
             }
             else
             {
@@ -35,7 +38,7 @@ public class LookForward : MonoBehaviour
         }
     }
 
-    private void SelectNewObject(ISelectableItem newSelectable)
+    private void SelectNewObject(ISelectableObject newSelectable)
     {
 
         if (lastSelectedObject != newSelectable)
